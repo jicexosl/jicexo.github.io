@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next mist use-motion" lang="zh-Hans">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -97,7 +97,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Mist',
+    scheme: 'Pisces',
     sidebar: {"position":"left","display":"post"},
     fancybox: true,
     motion: true,
@@ -238,6 +238,146 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://jicexo.com/2017/02/10/maven打包配置/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="jicexosl">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/cat.jpeg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="俯瞰风景">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="俯瞰风景" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/02/10/maven打包配置/" itemprop="url">
+                  maven打包配置
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-10T13:31:52+08:00">
+                2017-02-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/02/10/maven打包配置/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/10/maven打包配置/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/02/10/maven打包配置/" class="leancloud_visitors" data-flag-title="maven打包配置">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="通用打包配置"><a href="#通用打包配置" class="headerlink" title="通用打包配置"></a>通用打包配置</h1> <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div></pre></td><td class="code"><pre><div class="line">&lt;build&gt;</div><div class="line">    &lt;!-- 配置资源文件的打包路径 --&gt;</div><div class="line">    &lt;resources&gt;</div><div class="line">        &lt;resource&gt;</div><div class="line">            &lt;directory&gt;src/main/resources&lt;/directory&gt;</div><div class="line">            &lt;targetPath&gt;$&#123;project.build.outputDirectory&#125;&lt;/targetPath&gt;</div><div class="line">            &lt;filtering&gt;false&lt;/filtering&gt;</div><div class="line">        &lt;/resource&gt;</div><div class="line">        &lt;resource&gt;</div><div class="line">            &lt;directory&gt;src/main/resources&lt;/directory&gt;</div><div class="line">            &lt;targetPath&gt;$&#123;project.build.testOutputDirectory&#125;&lt;/targetPath&gt;</div><div class="line">            &lt;filtering&gt;false&lt;/filtering&gt;</div><div class="line">        &lt;/resource&gt;</div><div class="line">        &lt;!-- 将指定配置文件copy到config目录，通常是那些可以在jar包外部修改的文件 --&gt;</div><div class="line">        &lt;resource&gt;</div><div class="line">            &lt;directory&gt;src/main/resources&lt;/directory&gt;</div><div class="line">            &lt;targetPath&gt;$&#123;project.build.directory&#125;/release/config&lt;/targetPath&gt;</div><div class="line">            &lt;includes&gt;</div><div class="line">                &lt;include&gt;server.properties&lt;/include&gt;</div><div class="line">            &lt;/includes&gt;</div><div class="line">        &lt;/resource&gt;</div><div class="line">    &lt;/resources&gt;</div><div class="line"></div><div class="line">    &lt;plugins&gt;</div><div class="line">        &lt;!-- 打包插件 --&gt;</div><div class="line">        &lt;plugin&gt;</div><div class="line">            &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;</div><div class="line">            &lt;artifactId&gt;maven-jar-plugin&lt;/artifactId&gt;</div><div class="line">            &lt;version&gt;3.0.2&lt;/version&gt;</div><div class="line">            &lt;configuration&gt;</div><div class="line">                &lt;outputDirectory&gt;$&#123;project.build.directory&#125;/release/&lt;/outputDirectory&gt;</div><div class="line">                &lt;archive&gt;</div><div class="line">                    &lt;manifest&gt;</div><div class="line">                        &lt;addClasspath&gt;true&lt;/addClasspath&gt;</div><div class="line">                        &lt;classpathPrefix&gt;lib/&lt;/classpathPrefix&gt;</div><div class="line">                        &lt;!-- 避免manifest文件中的依赖包带有时间戳 --&gt;</div><div class="line">                        &lt;useUniqueVersions&gt;false&lt;/useUniqueVersions&gt;</div><div class="line">                        &lt;!-- 程序入口，即main函数 --&gt;</div><div class="line">                        &lt;mainClass&gt;com.xx.xx.Run&lt;/mainClass&gt;</div><div class="line">                    &lt;/manifest&gt;</div><div class="line">                    &lt;!-- 将配置文件目录添加至classpath --&gt;</div><div class="line">                    &lt;manifestEntries&gt;</div><div class="line">                        &lt;Class-Path&gt;config/ .&lt;/Class-Path&gt;</div><div class="line">                    &lt;/manifestEntries&gt;</div><div class="line">                &lt;/archive&gt;</div><div class="line">                &lt;!-- 排除不需要打进jar包的文件，也就是上面config目录中的文件 --&gt;</div><div class="line">                &lt;excludes&gt;</div><div class="line">                    &lt;exclude&gt;server.properties&lt;/exclude&gt;</div><div class="line">                &lt;/excludes&gt;</div><div class="line">            &lt;/configuration&gt;</div><div class="line">        &lt;/plugin&gt;</div><div class="line"></div><div class="line">        &lt;!-- 编译插件 --&gt;</div><div class="line">        &lt;plugin&gt;</div><div class="line">            &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;</div><div class="line">            &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;</div><div class="line">            &lt;version&gt;3.6.0&lt;/version&gt;</div><div class="line">            &lt;configuration&gt;</div><div class="line">                &lt;source&gt;1.8&lt;/source&gt;</div><div class="line">                &lt;target&gt;1.8&lt;/target&gt;</div><div class="line">            &lt;/configuration&gt;</div><div class="line">        &lt;/plugin&gt;</div><div class="line"></div><div class="line">        &lt;!--依赖管理插件--&gt;</div><div class="line">        &lt;plugin&gt;</div><div class="line">            &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;</div><div class="line">            &lt;artifactId&gt;maven-dependency-plugin&lt;/artifactId&gt;</div><div class="line">            &lt;version&gt;2.10&lt;/version&gt;</div><div class="line">            &lt;executions&gt;</div><div class="line">                &lt;execution&gt;</div><div class="line">                    &lt;id&gt;copy&lt;/id&gt;</div><div class="line">                    &lt;phase&gt;package&lt;/phase&gt;</div><div class="line">                    &lt;goals&gt;</div><div class="line">                        &lt;goal&gt;copy-dependencies&lt;/goal&gt;</div><div class="line">                    &lt;/goals&gt;</div><div class="line">                    &lt;configuration&gt;</div><div class="line">                        &lt;outputDirectory&gt;$&#123;project.build.directory&#125;/release/lib&lt;/outputDirectory&gt;</div><div class="line">                    &lt;/configuration&gt;</div><div class="line">                &lt;/execution&gt;</div><div class="line">            &lt;/executions&gt;</div><div class="line">        &lt;/plugin&gt;</div><div class="line"></div><div class="line">        &lt;!-- 单元测试插件 --&gt;</div><div class="line">        &lt;plugin&gt;</div><div class="line">            &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;</div><div class="line">            &lt;artifactId&gt;maven-surefire-plugin&lt;/artifactId&gt;</div><div class="line">            &lt;version&gt;2.19.1&lt;/version&gt;</div><div class="line">            &lt;configuration&gt;</div><div class="line">                &lt;argLine&gt;-Dfile.encoding=UTF-8&lt;/argLine&gt;</div><div class="line">                &lt;skipTests&gt;true&lt;/skipTests&gt;</div><div class="line">            &lt;/configuration&gt;</div><div class="line">        &lt;/plugin&gt;</div><div class="line"></div><div class="line">        &lt;!-- 源码插件 发布时自动将源码同时发布 --&gt;</div><div class="line">        &lt;plugin&gt;</div><div class="line">            &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;</div><div class="line">            &lt;artifactId&gt;maven-source-plugin&lt;/artifactId&gt;</div><div class="line">            &lt;version&gt;3.0.1&lt;/version&gt;</div><div class="line">            &lt;executions&gt;</div><div class="line">                &lt;execution&gt;</div><div class="line">                    &lt;phase&gt;package&lt;/phase&gt;</div><div class="line">                    &lt;goals&gt;</div><div class="line">                        &lt;goal&gt;jar-no-fork&lt;/goal&gt;</div><div class="line">                    &lt;/goals&gt;</div><div class="line">                &lt;/execution&gt;</div><div class="line">            &lt;/executions&gt;</div><div class="line">        &lt;/plugin&gt;</div><div class="line">    &lt;/plugins&gt;</div><div class="line">&lt;/build&gt;</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
     
       
 
@@ -422,7 +562,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -433,7 +573,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -488,7 +628,7 @@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT.Pisces
   </a>
 </div>
 
@@ -555,6 +695,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
 
   
 
